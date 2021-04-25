@@ -4,7 +4,7 @@ const app = express()
 const http = require('http');
 const paths = require('./paths/html.js');
 
-const PORT = 8080;
+var PORT = process.env.PORT || 3001
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,5 +16,5 @@ require("./paths/api.js")(app);
 
 // Starts our server.
 app.listen(PORT, () => {
-  console.log(`Server listening on: http://localhost:${PORT}`)
+  console.log(`Server listening on: http://localhost:${PORT}/`)
 });
