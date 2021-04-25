@@ -16,5 +16,5 @@ require("./paths/api.js")(app);
 
 // Starts our server.
 app.listen(PORT, () => {
-  console.log(`Server listening on: http://localhost:${PORT}/notes`)
+  console.log(`Server listening on: http://localhost:${PORT}`)
 });
